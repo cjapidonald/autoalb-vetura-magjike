@@ -26,9 +26,9 @@ const Kerko = () => {
         car.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
         car.model.toLowerCase().includes(searchTerm.toLowerCase());
       
-      const matchesBrand = selectedBrand === "" || car.brand === selectedBrand;
-      const matchesFuel = selectedFuel === "" || car.fuel === selectedFuel;
-      const matchesTransmission = selectedTransmission === "" || car.transmission === selectedTransmission;
+      const matchesBrand = selectedBrand === "" || selectedBrand === "all" || car.brand === selectedBrand;
+      const matchesFuel = selectedFuel === "" || selectedFuel === "all" || car.fuel === selectedFuel;
+      const matchesTransmission = selectedTransmission === "" || selectedTransmission === "all" || car.transmission === selectedTransmission;
       const matchesYear = car.year >= yearRange[0] && car.year <= yearRange[1];
       const matchesPrice = car.price >= priceRange[0] && car.price <= priceRange[1];
       const matchesKm = car.kilometers >= kmRange[0] && car.kilometers <= kmRange[1];
@@ -121,7 +121,7 @@ const Kerko = () => {
                       <SelectValue placeholder="Zgjedh markën" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Të gjitha markat</SelectItem>
+                      <SelectItem value="all">Të gjitha markat</SelectItem>
                       {brands.map(brand => (
                         <SelectItem key={brand} value={brand}>{brand}</SelectItem>
                       ))}
@@ -137,7 +137,7 @@ const Kerko = () => {
                       <SelectValue placeholder="Zgjedh karburantin" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Të gjitha llojet</SelectItem>
+                      <SelectItem value="all">Të gjitha llojet</SelectItem>
                       {fuelTypes.map(fuel => (
                         <SelectItem key={fuel} value={fuel}>{fuel}</SelectItem>
                       ))}
@@ -153,7 +153,7 @@ const Kerko = () => {
                       <SelectValue placeholder="Zgjedh transmisionin" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Të gjitha llojet</SelectItem>
+                      <SelectItem value="all">Të gjitha llojet</SelectItem>
                       {transmissionTypes.map(transmission => (
                         <SelectItem key={transmission} value={transmission}>{transmission}</SelectItem>
                       ))}
