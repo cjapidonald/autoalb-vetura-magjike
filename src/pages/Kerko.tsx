@@ -1,16 +1,17 @@
-
 import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CarCard from "@/components/CarCard";
-import { mockCars, brands, fuelTypes, transmissionTypes } from "@/data/cars";
-import { Search, Filter, X, Car, SlidersHorizontal } from "lucide-react";
+import { brands, fuelTypes, transmissionTypes } from "@/data/cars";
+import { useCars } from "@/hooks/useCars";
+import { Search, Filter, X, Car, SlidersHorizontal, Loader2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 
 const Kerko = () => {
+  const { data: cars = [], isLoading, error } = useCars();
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
   const [selectedFuel, setSelectedFuel] = useState("");
@@ -21,7 +22,7 @@ const Kerko = () => {
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredCars = useMemo(() => {
-    return mockCars.filter(car => {
+    return cars.filter(car => {
       const matchesSearch = searchTerm === "" || 
         car.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
         car.model.toLowerCase().includes(searchTerm.toLowerCase());
@@ -36,7 +37,7 @@ const Kerko = () => {
       return matchesSearch && matchesBrand && matchesFuel && matchesTransmission && 
              matchesYear && matchesPrice && matchesKm;
     });
-  }, [searchTerm, selectedBrand, selectedFuel, selectedTransmission, yearRange, priceRange, kmRange]);
+  }, [cars, searchTerm, selectedBrand, selectedFuel, selectedTransmission, yearRange, priceRange, kmRange]);
 
   const clearFilters = () => {
     setSearchTerm("");
@@ -59,6 +60,26 @@ const Kerko = () => {
   const formatKm = (km: number) => {
     return new Intl.NumberFormat('sq-AL').format(km);
   };
+
+  if (error) {
+    return (
+      <div className="min-h-screen bg-gray-50">
+        <Header />
+        <div className="container mx-auto px-4 py-16 text-center">
+          <div className="bg-white rounded-xl shadow-lg p-12">
+            <Car className="h-16 w-16 text-red-500 mx-auto mb-4" />
+            <h3 className="text-xl font-semibold text-gray-900 mb-2">
+              Gabim në ngarkim
+            </h3>
+            <p className="text-gray-600">
+              Ka ndodhur një gabim gjatë ngarkimit të makinave. Ju lutem provoni përsëri.
+            </p>
+          </div>
+        </div>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -226,7 +247,14 @@ const Kerko = () => {
             <div className="bg-white rounded-xl shadow-lg p-6 mb-6">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-bold text-gray-900">
-                  {filteredCars.length} makina të gjetura
+                  {isLoading ? (
+                    <div className="flex items-center space-x-2">
+                      <Loader2 className="h-5 w-5 animate-spin" />
+                      <span>Duke ngarkuar...</span>
+                    </div>
+                  ) : (
+                    `${filteredCars.length} makina të gjetura`
+                  )}
                 </h2>
                 <div className="flex items-center space-x-2 text-gray-600">
                   <Car className="h-5 w-5" />
@@ -236,7 +264,28 @@ const Kerko = () => {
             </div>
 
             {/* Cars Grid */}
-            {filteredCars.length > 0 ? (
+            {isLoading ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                {[...Array(6)].map((_, index) => (
+                  <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-pulse">
+                    <div className="w-full h-48 bg-gray-300"></div>
+                    <div className="p-6 space-y-3">
+                      <div className="h-6 bg-gray-300 rounded"></div>
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                        <div className="h-4 bg-gray-300 rounded"></div>
+                      </div>
+                      <div className="flex justify-between">
+                        <div className="h-4 bg-gray-300 rounded w-20"></div>
+                        <div className="h-6 bg-gray-300 rounded w-24"></div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : filteredCars.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                 {filteredCars.map((car) => (
                   <CarCard key={car.id} car={car} />

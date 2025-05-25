@@ -2,12 +2,13 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CarCard from "@/components/CarCard";
-import { mockCars } from "@/data/cars";
-import { Car, Star, Shield, Award, Users } from "lucide-react";
+import { useCars } from "@/hooks/useCars";
+import { Car, Star, Shield, Award, Users, Loader2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Index = () => {
-  const featuredCars = mockCars.slice(0, 6);
+  const { data: cars = [], isLoading } = useCars();
+  const featuredCars = cars.slice(0, 6);
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -108,11 +109,34 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {featuredCars.map((car) => (
-              <CarCard key={car.id} car={car} />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[...Array(6)].map((_, index) => (
+                <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden animate-pulse">
+                  <div className="w-full h-48 bg-gray-300"></div>
+                  <div className="p-6 space-y-3">
+                    <div className="h-6 bg-gray-300 rounded"></div>
+                    <div className="grid grid-cols-2 gap-3">
+                      <div className="h-4 bg-gray-300 rounded"></div>
+                      <div className="h-4 bg-gray-300 rounded"></div>
+                      <div className="h-4 bg-gray-300 rounded"></div>
+                      <div className="h-4 bg-gray-300 rounded"></div>
+                    </div>
+                    <div className="flex justify-between">
+                      <div className="h-4 bg-gray-300 rounded w-20"></div>
+                      <div className="h-6 bg-gray-300 rounded w-24"></div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredCars.map((car) => (
+                <CarCard key={car.id} car={car} />
+              ))}
+            </div>
+          )}
 
           <div className="text-center mt-12">
             <Link 
