@@ -9,13 +9,6 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="p-2 bg-white rounded-xl">
-                <img 
-                  src="/lovable-uploads/8c96d242-17f7-4842-a5b9-1c737b043ae7.png" 
-                  alt="Auto Pazar Logo" 
-                  className="h-6 w-auto"
-                />
-              </div>
               <h3 className="text-xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
                 Auto Pazar
               </h3>

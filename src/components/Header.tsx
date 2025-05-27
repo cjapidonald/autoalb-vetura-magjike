@@ -8,13 +8,6 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="p-2 bg-white rounded-xl group-hover:animate-glow transition-all duration-300">
-              <img 
-                src="/lovable-uploads/8c96d242-17f7-4842-a5b9-1c737b043ae7.png" 
-                alt="Auto Pazar Logo" 
-                className="h-8 w-auto"
-              />
-            </div>
             <div>
               <h1 className="text-2xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
                 Auto Pazar
