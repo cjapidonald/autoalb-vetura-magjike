@@ -20,7 +20,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 py-20 text-center text-white">
           <div className="max-w-4xl mx-auto space-y-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-float">
-              Auto<span className="text-albanian-gold">Alb</span>
+              Auto <span className="text-albanian-gold">Pazar</span>
             </h1>
             <p className="text-xl md:text-2xl font-semibold mb-4">
               "Makinat më të mira, çmimet më të përballueshme"
@@ -54,7 +54,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Pse të zgjedhësh <span className="text-albanian-red">AutoAlb</span>?
+              Pse të zgjedhësh <span className="text-albanian-red">Auto Pazar</span>?
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               Jemi të angazhuar të sigurojmë shërbimin më të mirë për klientët tanë

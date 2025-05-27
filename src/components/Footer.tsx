@@ -1,5 +1,5 @@
 
-import { Car, Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,11 +9,15 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="p-2 bg-red-gradient rounded-xl">
-                <Car className="h-6 w-6 text-white" />
+              <div className="p-2 bg-white rounded-xl">
+                <img 
+                  src="/lovable-uploads/3580e579-917f-494f-8add-5f51cea36ce9.png" 
+                  alt="Auto Pazar Logo" 
+                  className="h-6 w-auto"
+                />
               </div>
               <h3 className="text-xl font-bold bg-gold-gradient bg-clip-text text-transparent">
-                AutoAlb
+                Auto Pazar
               </h3>
             </div>
             <p className="text-gray-400 text-sm">
@@ -43,7 +47,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-albanian-red" />
-                <span className="text-gray-400">info@autoalb.al</span>
+                <span className="text-gray-400">info@autopazar.al</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-albanian-red" />
@@ -82,7 +86,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 AutoAlb. Të gjitha të drejtat të rezervuara.
+            © 2024 Auto Pazar. Të gjitha të drejtat të rezervuara.
           </p>
         </div>
       </div>

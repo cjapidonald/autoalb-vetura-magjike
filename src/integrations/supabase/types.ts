@@ -26,6 +26,7 @@ export type Database = {
           seats: number
           transmission: string
           updated_at: string
+          Wow: Json | null
           year: number
         }
         Insert: {
@@ -44,6 +45,7 @@ export type Database = {
           seats: number
           transmission: string
           updated_at?: string
+          Wow?: Json | null
           year: number
         }
         Update: {
@@ -62,6 +64,7 @@ export type Database = {
           seats?: number
           transmission?: string
           updated_at?: string
+          Wow?: Json | null
           year?: number
         }
         Relationships: []

@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Car, Search } from "lucide-react";
+import { Search } from "lucide-react";
 
 const Header = () => {
   return (
@@ -8,12 +8,16 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="p-2 bg-red-gradient rounded-xl group-hover:animate-glow transition-all duration-300">
-              <Car className="h-8 w-8 text-white" />
+            <div className="p-2 bg-white rounded-xl group-hover:animate-glow transition-all duration-300">
+              <img 
+                src="/lovable-uploads/3580e579-917f-494f-8add-5f51cea36ce9.png" 
+                alt="Auto Pazar Logo" 
+                className="h-8 w-auto"
+              />
             </div>
             <div>
               <h1 className="text-2xl font-bold bg-gold-gradient bg-clip-text text-transparent">
-                AutoAlb
+                Auto Pazar
               </h1>
               <p className="text-xs text-gray-400">Makinat më të mira</p>
             </div>
