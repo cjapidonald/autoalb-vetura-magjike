@@ -41,6 +41,12 @@ const CarCard = ({ car }: CarCardProps) => {
     return new Intl.NumberFormat('sq-AL').format(km);
   };
 
+  const handleContactClick = () => {
+    const message = `Përshëndetje! Jam i interesuar për ${car.brand} ${car.model} (${car.year}) me çmim ${formatPrice(car.price)}.`;
+    const whatsappUrl = `https://wa.me/355696444764?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, '_blank');
+  };
+
   return (
     <>
       <div 
@@ -206,7 +212,10 @@ const CarCard = ({ car }: CarCardProps) => {
               )}
 
               <div className="pt-4 border-t">
-                <button className="w-full bg-orange-gradient text-white py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-lg">
+                <button 
+                  onClick={handleContactClick}
+                  className="w-full bg-orange-gradient text-white py-3 rounded-lg font-semibold hover:scale-105 transition-transform duration-300 hover:shadow-lg"
+                >
                   Kontakto për këtë makinë
                 </button>
               </div>
