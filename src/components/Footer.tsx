@@ -11,12 +11,12 @@ const Footer = () => {
             <div className="flex items-center space-x-2">
               <div className="p-2 bg-white rounded-xl">
                 <img 
-                  src="/lovable-uploads/3580e579-917f-494f-8add-5f51cea36ce9.png" 
+                  src="/lovable-uploads/8c96d242-17f7-4842-a5b9-1c737b043ae7.png" 
                   alt="Auto Pazar Logo" 
                   className="h-6 w-auto"
                 />
               </div>
-              <h3 className="text-xl font-bold bg-gold-gradient bg-clip-text text-transparent">
+              <h3 className="text-xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
                 Auto Pazar
               </h3>
             </div>
@@ -28,29 +28,29 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-albanian-gold">Lidhje të Shpejta</h4>
+            <h4 className="text-lg font-semibold text-brand-orange">Lidhje të Shpejta</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="text-gray-400 hover:text-albanian-gold transition-colors">Ballina</a></li>
-              <li><a href="/kerko" className="text-gray-400 hover:text-albanian-gold transition-colors">Kërko Makinë</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-albanian-gold transition-colors">Rreth Nesh</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-albanian-gold transition-colors">Kontakt</a></li>
+              <li><a href="/" className="text-gray-400 hover:text-brand-orange transition-colors">Ballina</a></li>
+              <li><a href="/kerko" className="text-gray-400 hover:text-brand-orange transition-colors">Kërko Makinë</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-brand-orange transition-colors">Rreth Nesh</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-brand-orange transition-colors">Kontakt</a></li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-albanian-gold">Kontakti</h4>
+            <h4 className="text-lg font-semibold text-brand-orange">Kontakti</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-albanian-red" />
+                <Phone className="h-4 w-4 text-brand-orange" />
                 <span className="text-gray-400">+355 69 123 4567</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-albanian-red" />
+                <Mail className="h-4 w-4 text-brand-orange" />
                 <span className="text-gray-400">info@autopazar.al</span>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-albanian-red" />
+                <MapPin className="h-4 w-4 text-brand-orange" />
                 <span className="text-gray-400">Tiranë, Shqipëri</span>
               </div>
             </div>
@@ -58,7 +58,7 @@ const Footer = () => {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-albanian-gold">Na Ndiqni</h4>
+            <h4 className="text-lg font-semibold text-brand-orange">Na Ndiqni</h4>
             <div className="flex space-x-4">
               <a 
                 href="#" 
@@ -74,10 +74,10 @@ const Footer = () => {
               </a>
               <a 
                 href="#" 
-                className="p-2 bg-gray-800 hover:bg-red-600 rounded-lg transition-all duration-300 hover:scale-110"
+                className="p-2 bg-gray-800 hover:bg-brand-orange rounded-lg transition-all duration-300 hover:scale-110"
               >
                 <div className="h-5 w-5 bg-white rounded-sm flex items-center justify-center">
-                  <span className="text-xs font-bold text-red-600">T</span>
+                  <span className="text-xs font-bold text-brand-orange">T</span>
                 </div>
               </a>
             </div>

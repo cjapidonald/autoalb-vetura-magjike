@@ -63,11 +63,12 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				albanian: {
-					red: '#E41E20',
+				brand: {
+					orange: '#FF6B35',
 					black: '#000000',
-					gold: '#FFD700',
-					darkRed: '#B71C1C',
+					white: '#FFFFFF',
+					'orange-light': '#FF8A65',
+					'orange-dark': '#E55100',
 				}
 			},
 			borderRadius: {
@@ -94,10 +95,10 @@ export default {
 				},
 				'glow': {
 					'0%, 100%': {
-						boxShadow: '0 0 20px rgba(228, 30, 32, 0.5)',
+						boxShadow: '0 0 20px rgba(255, 107, 53, 0.5)',
 					},
 					'50%': {
-						boxShadow: '0 0 40px rgba(228, 30, 32, 0.8), 0 0 60px rgba(255, 215, 0, 0.4)',
+						boxShadow: '0 0 40px rgba(255, 107, 53, 0.8), 0 0 60px rgba(255, 138, 101, 0.4)',
 					}
 				},
 				'float': {
@@ -125,9 +126,9 @@ export default {
 				'shine': 'shine 2s ease-in-out infinite',
 			},
 			backgroundImage: {
-				'albanian-gradient': 'linear-gradient(135deg, #E41E20 0%, #000000 50%, #FFD700 100%)',
-				'red-gradient': 'linear-gradient(135deg, #E41E20 0%, #B71C1C 100%)',
-				'gold-gradient': 'linear-gradient(135deg, #FFD700 0%, #FFA000 100%)',
+				'brand-gradient': 'linear-gradient(135deg, #FF6B35 0%, #000000 50%, #FFFFFF 100%)',
+				'orange-gradient': 'linear-gradient(135deg, #FF6B35 0%, #E55100 100%)',
+				'orange-light-gradient': 'linear-gradient(135deg, #FF8A65 0%, #FF6B35 100%)',
 			}
 		}
 	},
