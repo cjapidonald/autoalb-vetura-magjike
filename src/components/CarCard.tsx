@@ -5,7 +5,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from 
 import { Badge } from "@/components/ui/badge";
 
 interface Car {
-  id: number;
+  id: string;
   brand: string;
   model: string;
   year: number;
