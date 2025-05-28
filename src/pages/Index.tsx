@@ -50,10 +50,10 @@ const Index = () => {
         <div className="absolute bottom-40 left-20 w-24 h-24 bg-white/10 rounded-full animate-float animation-delay-2000"></div>
       </section>
 
-      {/* About Section */}
-      <section className="py-16 bg-white">
+      {/* About Section - Made shorter */}
+      <section className="py-12 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Pse të zgjedhësh <span className="text-brand-orange">Vrum Vrum</span>?
             </h2>
@@ -62,37 +62,37 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             <div className="text-center group">
-              <div className="w-16 h-16 bg-orange-gradient rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:animate-glow transition-all duration-300">
-                <Car className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 bg-orange-gradient rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:animate-glow transition-all duration-300">
+                <Car className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Cilësi e Garantuar</h3>
-              <p className="text-gray-600">Çdo makinë kontrollohet nga ekspertët tanë</p>
+              <h3 className="text-lg font-semibold mb-2">Cilësi e Garantuar</h3>
+              <p className="text-gray-600 text-sm">Çdo makinë kontrollohet nga ekspertët tanë</p>
             </div>
 
             <div className="text-center group">
-              <div className="w-16 h-16 bg-orange-light-gradient rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:animate-glow transition-all duration-300">
-                <Star className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 bg-orange-light-gradient rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:animate-glow transition-all duration-300">
+                <Star className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Çmime Konkurruese</h3>
-              <p className="text-gray-600">Çmimet më të mira në treg për cilësinë e ofruar</p>
+              <h3 className="text-lg font-semibold mb-2">Çmime Konkurruese</h3>
+              <p className="text-gray-600 text-sm">Çmimet më të mira në treg për cilësinë e ofruar</p>
             </div>
 
             <div className="text-center group">
-              <div className="w-16 h-16 bg-orange-gradient rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:animate-glow transition-all duration-300">
-                <Shield className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 bg-orange-gradient rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:animate-glow transition-all duration-300">
+                <Shield className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Siguri dhe Besueshmëri</h3>
-              <p className="text-gray-600">Transaksione të sigurta dhe transparente</p>
+              <h3 className="text-lg font-semibold mb-2">Siguri dhe Besueshmëri</h3>
+              <p className="text-gray-600 text-sm">Transaksione të sigurta dhe transparente</p>
             </div>
 
             <div className="text-center group">
-              <div className="w-16 h-16 bg-orange-light-gradient rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:animate-glow transition-all duration-300">
-                <Award className="h-8 w-8 text-white" />
+              <div className="w-14 h-14 bg-orange-light-gradient rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:animate-glow transition-all duration-300">
+                <Award className="h-7 w-7 text-white" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">Shërbim i Shkëlqyer</h3>
-              <p className="text-gray-600">Mbështetje 24/7 për klientët tanë</p>
+              <h3 className="text-lg font-semibold mb-2">Shërbim i Shkëlqyer</h3>
+              <p className="text-gray-600 text-sm">Mbështetje 24/7 për klientët tanë</p>
             </div>
           </div>
         </div>
