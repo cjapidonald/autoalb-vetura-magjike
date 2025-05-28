@@ -10,12 +10,12 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <h3 className="text-xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
-                Auto Pazar
+                Vrum Vrum
               </h3>
             </div>
             <p className="text-gray-400 text-sm">
-              Platforma më e mirë për blerje dhe shitje makinash në Shqipëri. 
-              Makinat më të mira me çmimet më të përballueshme.
+              Jemi themeluar para 3 vitesh dhe specializohemi në importin e makinave nga Korea. 
+              Platforma më e mirë për blerje dhe shitje makinash në Shqipëri me çmimet më të përballueshme.
             </p>
           </div>
 
@@ -36,11 +36,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400">+355 69 123 4567</span>
+                <span className="text-gray-400">069 971 1350</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-brand-orange" />
-                <span className="text-gray-400">info@autopazar.al</span>
+                <span className="text-gray-400">info@vrum.al</span>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-brand-orange" />
@@ -54,7 +54,9 @@ const Footer = () => {
             <h4 className="text-lg font-semibold text-brand-orange">Na Ndiqni</h4>
             <div className="flex space-x-4">
               <a 
-                href="#" 
+                href="https://www.facebook.com/shqiperiabehetsupporters"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-gray-800 hover:bg-blue-600 rounded-lg transition-all duration-300 hover:scale-110"
               >
                 <Facebook className="h-5 w-5" />
@@ -79,7 +81,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2024 Auto Pazar. Të gjitha të drejtat të rezervuara.
+            © 2025 Vrum Vrum. Të gjitha të drejtat të rezervuara.
           </p>
         </div>
       </div>

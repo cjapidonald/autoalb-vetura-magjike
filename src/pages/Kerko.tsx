@@ -1,3 +1,4 @@
+
 import { useState, useMemo } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -17,8 +18,8 @@ const Kerko = () => {
   const [selectedFuel, setSelectedFuel] = useState("");
   const [selectedTransmission, setSelectedTransmission] = useState("");
   const [yearRange, setYearRange] = useState([2015, 2024]);
-  const [priceRange, setPriceRange] = useState([5000, 50000]);
-  const [kmRange, setKmRange] = useState([0, 100000]);
+  const [priceRange, setPriceRange] = useState([0, 50000]);
+  const [kmRange, setKmRange] = useState([0, 300000]);
   const [showFilters, setShowFilters] = useState(false);
 
   const filteredCars = useMemo(() => {
@@ -45,8 +46,8 @@ const Kerko = () => {
     setSelectedFuel("");
     setSelectedTransmission("");
     setYearRange([2015, 2024]);
-    setPriceRange([5000, 50000]);
-    setKmRange([0, 100000]);
+    setPriceRange([0, 50000]);
+    setKmRange([0, 300000]);
   };
 
   const formatPrice = (price: number) => {
@@ -205,8 +206,8 @@ const Kerko = () => {
                   <Slider
                     value={priceRange}
                     onValueChange={setPriceRange}
-                    min={5000}
-                    max={100000}
+                    min={0}
+                    max={50000}
                     step={1000}
                     className="w-full"
                   />
@@ -221,7 +222,7 @@ const Kerko = () => {
                     value={kmRange}
                     onValueChange={setKmRange}
                     min={0}
-                    max={200000}
+                    max={300000}
                     step={5000}
                     className="w-full"
                   />
