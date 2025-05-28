@@ -6,6 +6,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Kerko from "./pages/Kerko";
+import RrethNesh from "./pages/RrethNesh";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -19,6 +20,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/kerko" element={<Kerko />} />
+          <Route path="/rreth-nesh" element={<RrethNesh />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

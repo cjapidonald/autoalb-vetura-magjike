@@ -32,6 +32,13 @@ const Header = () => {
               <span>Kërko</span>
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
             </Link>
+            <Link 
+              to="/rreth-nesh" 
+              className="text-white hover:text-brand-orange transition-colors duration-300 relative group"
+            >
+              Rreth Nesh
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-orange transition-all duration-300 group-hover:w-full"></span>
+            </Link>
           </nav>
 
           <div className="flex items-center space-x-4">

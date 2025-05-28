@@ -23,12 +23,10 @@ const Index = () => {
               Vrum <span className="text-brand-orange">Vrum</span>
             </h1>
             <p className="text-xl md:text-2xl font-semibold mb-4">
-              "Makinat më të mira, çmimet më të përballueshme"
+              Gjej makinën perfekte për ty
             </p>
             <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-              Jemi themeluar para 3 vitesh dhe specializohemi në importin e makinave nga Korea. 
-              Ne jemi platforma më e besueshme për blerje dhe shitje makinash në Shqipëri. 
-              Ofrojmë makinat më cilësore me çmimet më konkurruese në treg.
+              Platforma më e besueshme për blerje dhe shitje makinash në Shqipëri me çmimet më konkurruese në treg.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8">
               <Link 
@@ -37,9 +35,12 @@ const Index = () => {
               >
                 Kërko Makinën Tënde
               </Link>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-orange transition-all duration-300">
+              <Link
+                to="/rreth-nesh"
+                className="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-brand-orange transition-all duration-300"
+              >
                 Rreth Nesh
-              </button>
+              </Link>
             </div>
           </div>
         </div>

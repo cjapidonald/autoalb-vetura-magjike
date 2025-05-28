@@ -1,5 +1,6 @@
 
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,9 +24,9 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-brand-orange">Lidhje të Shpejta</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="/" className="text-gray-400 hover:text-brand-orange transition-colors">Ballina</a></li>
-              <li><a href="/kerko" className="text-gray-400 hover:text-brand-orange transition-colors">Kërko Makinë</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-brand-orange transition-colors">Rreth Nesh</a></li>
+              <li><Link to="/" className="text-gray-400 hover:text-brand-orange transition-colors">Ballina</Link></li>
+              <li><Link to="/kerko" className="text-gray-400 hover:text-brand-orange transition-colors">Kërko Makinë</Link></li>
+              <li><Link to="/rreth-nesh" className="text-gray-400 hover:text-brand-orange transition-colors">Rreth Nesh</Link></li>
               <li><a href="#" className="text-gray-400 hover:text-brand-orange transition-colors">Kontakt</a></li>
             </ul>
           </div>
