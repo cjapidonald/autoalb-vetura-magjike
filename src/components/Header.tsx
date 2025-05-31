@@ -10,7 +10,7 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <div>
               <h1 className="text-2xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
-                Vrum Vrum
+                Pazari Auto
               </h1>
               <p className="text-xs text-gray-400">Makinat më të mira</p>
             </div>

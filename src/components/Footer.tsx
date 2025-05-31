@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <h3 className="text-xl font-bold bg-orange-light-gradient bg-clip-text text-transparent">
-                Vrum Vrum
+                Pazari Auto
               </h3>
             </div>
             <p className="text-gray-400 text-sm">
@@ -82,7 +82,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Vrum Vrum. Të gjitha të drejtat të rezervuara.
+            © 2025 Pazari Auto. Të gjitha të drejtat të rezervuara.
           </p>
         </div>
       </div>
